@@ -1,0 +1,11 @@
+.name{
+    text-align: center;
+    font-size: 30px;
+    font-style: italic;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
