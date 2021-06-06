@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename= 'styles/style.css') }}"> -->
+    <title>Profile </title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+            height: 90px;
+            justify-content: flex-start;
+        }
+
+        .flex-item {
+            margin: 10px;
+            width: 14.2%;
+            text-align: center;
+            line-height: 75px;
+            text-decoration: none;
+            font-size: 22px;
+        }
+
+        .containercol {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 54px;
+        }
+
+        #uderemove {
+            text-decoration: none;
+        }
+
+        .ait {
+
+            flex: 0 0 33.33333%;
+            max-width: 33.33333%;
+        }
+
+        .single-service {
+            text-align: center;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class='containercol'>
+        <div class='container'>
+
+            <div class="flex-item"><a id='uderemove' href='#'>Home</a></div>
+            <div class="flex-item"><a id='uderemove' href='#'>About Me</a></div>
+
+            <div class="flex-item"><a id='uderemove' href='#'>Projects</a></div>
+            <div class="flex-item"><a id='uderemove' href='#'>Experience</a></div>
+            <div class="flex-item"><a id='uderemove' href='#'>Courses</a></div>
+            <div class="flex-item"><a id='uderemove' href='#'>Technical Skills</a></div>
+            <div class="flex-item"><a id='uderemove' href='#'>Contact</a></div>
+
+
+        </div>
+        <div>
+            <h1 class='title'>Saidarao Chirumamilla</h1>
+        </div>
+        <div class='title'>Areas Of Intrest</div>
+        <div class='container'>
+            <div>
+                <div>Machine Learning</div>
+            </div>
+            <div>Machine Learning</div>
+            <div>NLP</div>
+            <div>Cloud Compute</div>
+            <div>Model Deployment</div>
+
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
