@@ -11,6 +11,31 @@
             flex-direction: row;
             height: 90px;
             justify-content: flex-start;
+            background-color: antiquewhite;
+        }
+
+        .photocontainer {
+
+            display: flex;
+            flex-direction: row;
+            height: 500px;
+            justify-content: center;
+            background-color: aliceblue;
+            margin-top: 15px;
+
+        }
+
+        .img{
+            margin:auto;
+            display: block;
+
+        }
+
+        .centerdiv {
+            margin: auto;
+            width: 50%;
+            padding: 10px;
+            text-align: center;
         }
 
         .flex-item {
@@ -22,6 +47,11 @@
             font-size: 22px;
         }
 
+        .photo {
+            width: 50%;
+            margin:auto
+        }
+
         .containercol {
             display: flex;
             flex-direction: column;
@@ -29,8 +59,8 @@
         }
 
         .title {
-            text-align: center;
-            font-size: 54px;
+            font-size: large;
+            font: bold;
         }
 
         #uderemove {
@@ -57,7 +87,7 @@
             <div class="flex-item"><a id='uderemove' href='#'>Home</a></div>
             <div class="flex-item"><a id='uderemove' href='#'>About Me</a></div>
 
-            <div class="flex-item"><a id='uderemove' href='#'>Projects</a></div>
+            <div class="flex-item"><a id='uderemove' href='/aboutme'>Projects</a></div>
             <div class="flex-item"><a id='uderemove' href='#'>Experience</a></div>
             <div class="flex-item"><a id='uderemove' href='#'>Courses</a></div>
             <div class="flex-item"><a id='uderemove' href='#'>Technical Skills</a></div>
@@ -65,20 +95,20 @@
 
 
         </div>
-        <div>
-            <h1 class='title'>Saidarao Chirumamilla</h1>
-        </div>
-        <div class='title'>Areas Of Intrest</div>
-        <div class='container'>
-            <div>
-                <div>Machine Learning</div>
+
+        <div class='photocontainer'>
+
+            <div class='centerdiv'>
+                <p>I am</p>
+                <h2 class="title">Saidarao Chirumamilla</h2>
             </div>
-            <div>Machine Learning</div>
-            <div>NLP</div>
-            <div>Cloud Compute</div>
-            <div>Model Deployment</div>
+            <div class="photo"><img class = 'img' src="{{ url_for('static', filename='IMG_3581.jpg') }}" alt="" width="400"
+                    height="400"></div>
+
 
         </div>
+    </div>
+
 
 
     </div>
