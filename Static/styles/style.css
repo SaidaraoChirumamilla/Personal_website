@@ -15,6 +15,13 @@
     text-decoration: none;
 }
 
+.email {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
 .flex-item {
     /* margin: 10px; */
     width: 14.2%;
@@ -30,6 +37,10 @@
 
 .ml20px {
     margin-left: 20px;
+}
+
+.m10px {
+    margin: 10px;
 }
 
 .mt10px {
@@ -121,8 +132,30 @@
     margin-top: 0px;
 }
 
+.footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    /* justify-content: flex-end; */
+    margin-top: 15px;
+}
+
+.focontent {
+    text-align: end;
+}
+
+.confirstn {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
+
 .skill-bars .bar .info {
     margin-bottom: 5px;
+}
+
+.wd {
+    width: 50%;
 }
 
 .skill-bars .bar .info span {

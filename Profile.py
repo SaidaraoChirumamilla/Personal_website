@@ -1,5 +1,6 @@
 from flask import Flask
 from flask import render_template
+from flask.wrappers import Request
 
 app = Flask(__name__)
 
@@ -7,8 +8,12 @@ app = Flask(__name__)
 def index():
     return render_template('home.html')
 
-@app.route('/home')
+
+@app.route('/home', methods=["GET", "POST"])
 def home():
+    ButtonPressed = "success"
+    if Request.method == "POST":
+        return render_template("home.html", ButtonPressed )
     return render_template('home.html')
 
 @app.route('/aboutme')
