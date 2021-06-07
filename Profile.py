@@ -7,8 +7,29 @@ app = Flask(__name__)
 def index():
     return render_template('home.html')
 
+@app.route('/home')
+def home():
+    return render_template('home.html')
+
 @app.route('/aboutme')
-def go():
+def aboutme():
+    return render_template('AboutMe.html')
+
+@app.route('/projects')
+def projects():
+    return render_template('AboutMe.html')
+
+@app.route('/experince')
+def experince():
+    return render_template('AboutMe.html')
+
+@app.route('/techicalskills')
+def techicalskills():
+    return render_template('TechnicalSkills.html')
+
+
+@app.route('/Contact')
+def Contact():
     return render_template('AboutMe.html')
 
 if __name__ == "__main__":
