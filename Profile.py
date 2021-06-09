@@ -1,6 +1,10 @@
-from flask import Flask
+from flask import Flask, request
 from flask import render_template
+from flask.helpers import url_for
 from flask.wrappers import Request
+# from flask_sqlalchemy import SQLAlchemy
+from werkzeug.utils import redirect
+
 
 app = Flask(__name__)
 
@@ -20,9 +24,28 @@ def home():
 def aboutme():
     return render_template('AboutMe.html')
 
-@app.route('/projects')
+@app.route("/projects", methods=["GET", "POST"])
 def projects():
-    return render_template('AboutMe.html')
+    if request.method == 'POST' :
+
+        Email = request.form['email']
+        firstName = request.form['fname']
+        secondname = request.form['sname']
+        msg = request.form['msg']
+
+        print(Email,firstName,secondname,msg)
+
+        return render_template('Projects.html',firstName  = firstName, secondname = secondname, Email = Email, msg = msg)
+
+        # redirect('/projects', firstName  = firstName, secondname = secondname, Email = Email, msg = msg)
+
+
+    else :
+        return render_template('Projects.html')
+
+	
+
+	
 
 @app.route('/experince')
 def experince():
