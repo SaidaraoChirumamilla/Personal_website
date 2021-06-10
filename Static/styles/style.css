@@ -144,14 +144,19 @@
     margin: 10px;
 }
 
+@media(max-width:800px) {
+    containerheader {
+        flex-direction: row;
+    }
+}
+
 .mt10px {
     margin-top: 10px;
 }
 
 .containerheader {
     display: flex;
-    flex-direction: row;
-    height: 90px;
+    /* flex-direction: row; */
     flex-wrap: nowrap;
     justify-content: flex-start;
     background-color: antiquewhite;
