@@ -24,6 +24,10 @@ def home():
 def aboutme():
     return render_template('AboutMe.html')
 
+@app.route('/courses')
+def Courses():
+    return render_template('Courses.html')
+
 @app.route("/projects", methods=["GET", "POST"])
 def projects():
     if request.method == 'POST' :
@@ -49,7 +53,7 @@ def projects():
 
 @app.route('/experince')
 def experince():
-    return render_template('AboutMe.html')
+    return render_template('Experince.html')
 
 @app.route('/techicalskills')
 def techicalskills():
