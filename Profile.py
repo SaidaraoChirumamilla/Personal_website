@@ -2,7 +2,7 @@ from flask import Flask, request
 from flask import render_template
 from flask.helpers import url_for
 from flask.wrappers import Request
-# from flask_sqlalchemy import SQLAlchemy
+from flask_sqlalchemy import SQLAlchemy
 from werkzeug.utils import redirect
 
 
@@ -11,7 +11,6 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     return render_template('home.html')
-
 
 @app.route('/home', methods=["GET", "POST"])
 def home():
