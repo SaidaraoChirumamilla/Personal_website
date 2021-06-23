@@ -15,7 +15,7 @@ def index():
 @app.route('/home', methods=["GET", "POST"])
 def home():
     ButtonPressed = "success"
-    if Request.method == "POST":
+    if request.method == "POST":
         return render_template("home.html", ButtonPressed )
     return render_template('home.html')
 
@@ -23,9 +23,10 @@ def home():
 def aboutme():
     return render_template('AboutMe.html')
 
-@app.route('/courses')
+@app.route('/courses')skdjhfsdkjhf
 def Courses():
     return render_template('Courses.html')
+
 
 @app.route("/projects", methods=["GET", "POST"])
 def projects():
@@ -46,9 +47,6 @@ def projects():
     else :
         return render_template('Projects.html')
 
-	
-
-	
 
 @app.route('/experince')
 def experince():
