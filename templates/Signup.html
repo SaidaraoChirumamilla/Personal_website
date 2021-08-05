@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="{{ url_for('static', filename='styles/style.css' ) }}" rel="stylesheet" type="text/css" />
+</head>
+<style>
+    /*add full-width input fields*/
+    
+    input[type=text],
+    input[type=password] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 2px solid #ccc;
+        box-sizing: border-box;
+    }
+    /* set a style for all buttons*/
+    
+    button {
+        background-color: Green;
+        color: white;
+        padding: 15px 20px;
+        margin: 8px 0;
+        cursor: pointer;
+        width: 100%;
+    }
+    /*set styles for the cancel button*/
+    
+    .cancelbtn {
+        padding: 15px 20px;
+        background-color: #FF2E00;
+    }
+    /*float cancel and signup buttons and add an equal width*/
+    
+    .cancelbtn,
+    .signupbtn {
+        float: left;
+        width: 50%;
+    }
+    /*add padding to container elements*/
+    
+    .container {
+        padding: 16px;
+    }
+    /*clear floats*/
+    
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    /*styles for cancel button and signup button
+	on extra small screens*/
+    
+    @media screen and (max-width: 300px) {
+        .cancelbtn,
+        .signupbtn {
+            width: 100%;
+        }
+    }
+</style>
+
+<body style="background-color: bisque;">
+
+    <div class="signUplogin">
+        <a>Already A Member</a>
+        <a href="#"> Login in</a>
+    </div>
+    <div>
+
+        <form action="" method="POST">
+            <div class="msg"></div>
+            <input id="f" name="firstName" type="text" placeholder="Enter Your first Name" class="textbox" /></br>
+            </br>
+
+            <input id="lname" name="lastName" type="text" placeholder="Enter Your last Name" class="textbox" /></br>
+            </br>
+
+            <input id="password" name="password" type="password" placeholder="Enter Your Password" class="textbox" /></br>
+            </br>
+
+            <input id="email" name="email" type="text" placeholder="Enter Your Email ID" class="textbox" /></br>
+            </br>
+
+            <label for="role">Choose a role:</label>
+            <select id="roles" name="roles">
+               <option value="student">student</option>
+                <option value="Instructor">instructor</option>
+            </select><br> </br>
+
+            <input type="checkbox" name="grade" value="g1"> G1 <br> </br>
+            <input type="checkbox" name="grade" value="g2"> G2<br> </br>
+            <input type="checkbox" name="grade" value="g4"> G2<br> </br>
+
+            <input type="submit" class="btn" value="Sign Up"></br>
+        </form>
+    </div>
+
+
+
+
+    </form>
+    </div>
+
+
+    </form>
+
+</body>
+
+</html>

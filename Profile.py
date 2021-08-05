@@ -2,7 +2,11 @@ from flask import Flask, request
 from flask import render_template
 from flask.helpers import url_for
 from flask.wrappers import Request
-from flask_sqlalchemy import SQLAlchemy
+from signup import signup
+import psycopg2
+from flask_wtf import FlaskForm
+# from flask_bootstrap import bootstrap
+# from flask_sqlalchemy import SQLAlchemy
 from werkzeug.utils import redirect
 
 
@@ -10,7 +14,26 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('home.html')
+    return render_template('home1.html')
+
+@app.route('/signup',methods=["GET", "POST"])
+def signup():
+    if request.method == 'POST' :
+
+        print(request.form)
+
+        signup(request.form)
+
+        # username = request.form['username']
+        # password = request.form['password']
+        
+        # email = request.form['email']
+
+        # print(email,password,username)
+
+        return render_template('Signup.html')
+    return render_template('Signup.html')
+
 
 @app.route('/home', methods=["GET", "POST"])
 def home():
@@ -23,7 +46,7 @@ def home():
 def aboutme():
     return render_template('AboutMe.html')
 
-@app.route('/courses')skdjhfsdkjhf
+@app.route('/courses')
 def Courses():
     return render_template('Courses.html')
 
