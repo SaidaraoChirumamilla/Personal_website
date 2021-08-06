@@ -16,50 +16,6 @@
         border: 2px solid #ccc;
         box-sizing: border-box;
     }
-    /* set a style for all buttons*/
-    
-    button {
-        background-color: Green;
-        color: white;
-        padding: 15px 20px;
-        margin: 8px 0;
-        cursor: pointer;
-        width: 100%;
-    }
-    /*set styles for the cancel button*/
-    
-    .cancelbtn {
-        padding: 15px 20px;
-        background-color: #FF2E00;
-    }
-    /*float cancel and signup buttons and add an equal width*/
-    
-    .cancelbtn,
-    .signupbtn {
-        float: left;
-        width: 50%;
-    }
-    /*add padding to container elements*/
-    
-    .container {
-        padding: 16px;
-    }
-    /*clear floats*/
-    
-    .clearfix::after {
-        content: "";
-        clear: both;
-        display: table;
-    }
-    /*styles for cancel button and signup button
-	on extra small screens*/
-    
-    @media screen and (max-width: 300px) {
-        .cancelbtn,
-        .signupbtn {
-            width: 100%;
-        }
-    }
 </style>
 
 <body style="background-color: bisque;">
@@ -68,7 +24,7 @@
         <a>Already A Member</a>
         <a href="#"> Login in</a>
     </div>
-    <div>
+    <div class="signupdiv">
 
         <form action="" method="POST">
             <div class="msg"></div>
@@ -81,11 +37,18 @@
             <input id="password" name="password" type="password" placeholder="Enter Your Password" class="textbox" /></br>
             </br>
 
+            <input id="cpassword" name="cpassword" type="password" placeholder="confirm Password" class="textbox" /></br>
+            </br>
+
             <input id="email" name="email" type="text" placeholder="Enter Your Email ID" class="textbox" /></br>
+            </br>
+
+            <input id="phone" name="phone" type="tel" placeholder="enter your phone number" class="textbox" /></br>
             </br>
 
             <label for="role">Choose a role:</label>
             <select id="roles" name="roles">
+                <option value="None">None</option>
                <option value="student">student</option>
                 <option value="Instructor">instructor</option>
             </select><br> </br>

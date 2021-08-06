@@ -4,6 +4,11 @@
     font-style: italic;
 }
 
+.signupdiv {
+    width: 43%;
+    margin: auto
+}
+
 .topnav {
     margin: auto;
     overflow: hidden;
