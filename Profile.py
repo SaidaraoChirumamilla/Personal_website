@@ -2,7 +2,7 @@ from flask import Flask, request
 from flask import render_template
 from flask.helpers import url_for
 from flask.wrappers import Request
-from signup import signup
+from signup import Signup
 import psycopg2
 from flask_wtf import FlaskForm
 # from flask_bootstrap import bootstrap
@@ -20,9 +20,11 @@ def index():
 def signup():
     if request.method == 'POST' :
 
-        print(request.form)
+        # print(request.form)
 
-        signup(request.form)
+        x = Signup(request.form)
+
+        print("x =",x)
 
         # username = request.form['username']
         # password = request.form['password']
