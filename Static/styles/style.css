@@ -9,6 +9,10 @@
     margin: auto
 }
 
+.ml45 {
+    margin-left: 45px;
+}
+
 .topnav {
     margin: auto;
     overflow: hidden;
@@ -17,6 +21,7 @@
 }
 
 .signUplogin {
+    padding: 10px;
     width: 29%;
     margin: auto
 }

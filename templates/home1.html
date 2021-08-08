@@ -10,8 +10,20 @@
 </head>
 
 <body style="background-color: bisque;">
+
+    <div class="col-md-8">
+        {% with messages = get_flashed_messages(with_categories=true) %} {% if messages %} {% for category, message in messages %}
+        <div class="alert alert-{{ category }}">
+            {{ message }}
+        </div>
+        {% endfor %} {% endif %} {% endwith %} {% block content %}{% endblock %}
+    </div>
+
+
     <div class="heading">
         <h1> I AM STEM</h1>
+
+
     </div>
     <div class="topnav">
         <a class="active" href="#home">Home</a>
