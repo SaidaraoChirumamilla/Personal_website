@@ -1,5 +1,6 @@
+import platform
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField, BooleanField, SelectField, SelectMultipleField, widgets
+from wtforms import StringField, PasswordField, SubmitField, SelectField, SelectMultipleField, widgets
 from wtforms.validators import DataRequired, Length, Email, EqualTo
 
 
@@ -11,12 +12,15 @@ class MultiCheckboxField(SelectMultipleField):
 
 class SignupForm(FlaskForm):
 
+        
+
     role_drop_down = ["None","Student","Instructor","Admin"]
 
     gradeMenu = ['11','22', '33', '44']
 
-    username = StringField('User name',
-                           validators=[DataRequired(), Length(min=2, max=20)])
+
+    # username = StringField('User name',
+                        #    validators=[DataRequired(), Length(min=2, max=20)])
 
     firstname = StringField('First name',
                            validators=[DataRequired(), Length(min=2, max=20)])
@@ -44,6 +48,23 @@ class SignupForm(FlaskForm):
     def __init__(self, *args, **kwargs):
             kwargs['csrf_enabled'] = False
             super(SignupForm, self).__init__(*args, **kwargs)
+
+
+class LoginForm(FlaskForm):
+
+    email = StringField('Email',
+                        validators=[DataRequired()])
+
+    password = PasswordField('Password', validators=[DataRequired()])
+
+    submit = SubmitField('Login')
+
+    def __init__(self, *args, **kwargs):
+            kwargs['csrf_enabled'] = False
+            super(LoginForm, self).__init__(*args, **kwargs)
+
+    
+
 
 
 

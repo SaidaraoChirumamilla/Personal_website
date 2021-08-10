@@ -5,8 +5,17 @@
 }
 
 .signupdiv {
-    width: 43%;
-    margin: auto
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: auto;
+}
+
+.acc {
+    align-content: center;
 }
 
 .ml45 {

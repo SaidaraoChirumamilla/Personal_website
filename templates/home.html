@@ -1,79 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="{{ url_for('static', filename='styles/style.css' ) }}" rel="stylesheet" type="text/css" />
-    <!-- <link rel="stylesheet" href="{{ url_for('static', filename= 'styles/style.css') }}"> -->
-    <title>Profile </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Home Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
 
-<body>
-    <div class="container">
+<body style="background-color: bisque;">
 
-        <!-- Code for header -->
-        <div class='containerheader'>
-            <div class="flex-item"><a id='uderemove' href='/home'>Home</a></div>
-            <div class="flex-item"><a id='uderemove' href='/aboutme'>About Me</a></div>
-            <div class="flex-item"><a id='uderemove' href='/projects'>Projects</a></div>
-            <div class="flex-item"><a id='uderemove' href='/experince'>Experience</a></div>
-            <div class="flex-item"><a id='uderemove' href='/courses'>Courses</a></div>
-            <div class="flex-item"><a id='uderemove' href='techicalskills'>Technical Skills</a></div>
-            <div class="flex-item"><a id='uderemove' href='contact'>Contact</a></div>
-        </div>
-
-        <!-- code for body -->
-
-        <div class='photocontainer'>
-            <div class='centerdiv'>
-                <p>I am</p>
-                <h2 class="title">Saidarao Chirumamilla</h2>
+    <div>
+        {% with messages = get_flashed_messages(with_categories=true) %} {% if messages %} {% for category, message in messages %}
+        <div class="mt-4 ml-4 mr-4">
+            <div class="p-3 mb-2 bg-success ">
+                {{ message }}
+                <a href="/login">login now</a>
+                <a href='/home'><i class="material-icons float-md-right" style="font-size:25px">close</i></a>
             </div>
-            <div class="photo"><img class='img' src="{{ url_for('static', filename='IMG_3581.jpg') }}" alt="" width="400" height="400"></div>
+            {% endfor %} {% endif %} {% endwith %} {% block content %}{% endblock %}
         </div>
-
-
-        <!-- Code for footer -->
-        <div class="containerrow" style="background-color: darkgray;">
-            <div class="width30"></div>
-            <div class="width30"></div>
-            <div class="container" style="width:40%">
-                <div>
-                    <p>Get in Touch</p>
-                </div>
-                <div class="containerform">
-                    <form action="/projects" method="post">
-                        <div class="containerrow">
-                            <div class="form-group">
-                                <label for="fname">First Name</label>
-                                <input type="text" id="namef" name="fname" class="form-control" placeholder="first name" required autofocus>
-                            </div>
-                            <div class="form-group"><label for="lname">Last Name</label>
-                                <input class="form-control" id="namel" name="sname" placeholder="second Name" required></textarea>
-                            </div>
-                        </div>
-                        <div class="containerrow">
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input class="form-control" id="mail" name="email" placeholder="Email" required></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label for="msg">Message</label>
-                                <textarea class="form-control" style="height: 100px;" rows="5" id="msg" name="msg" placeholder="Enter your message" required></textarea>
-                            </div>
-                        </div>
-                        <div class="containerrow button" style="justify-content: flex-end;">
-                            <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-
     </div>
 
+
+    {% include "nav.html" %}
 </body>
 
 </html>
